@@ -1,2 +1,1 @@
-include data/resnet18.pt
-
+recursive-include data *
