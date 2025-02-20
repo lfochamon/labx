@@ -1,2 +1,2 @@
-include labx/data/resnet18.pt
+include data/resnet18.pt
 
