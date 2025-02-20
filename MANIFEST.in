@@ -1,1 +1,2 @@
-recursive-include data *
+include labx/data/resnet18.pt
+
