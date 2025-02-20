@@ -117,7 +117,7 @@ class ResNet(nn.Module):
 def resnet18(pretrained, device):
     model = ResNet()
     if pretrained:
-        script_dir = os.path.dirname(__file__)
-        state_dict = torch.load(script_dir + "/data/resnet18.pt", weights_only=True)
+        script_dir = importlib.resources.files(__package__)
+        state_dict = torch.load(script_dir.joinpath("/data/resnet18.pt"), weights_only=True)
         model.load_state_dict(state_dict)
     return model.to(device)
