@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import os
+import importlib
 
 
 class BasicBlock(nn.Module):
@@ -117,6 +118,6 @@ def resnet18(pretrained, device):
     model = ResNet()
     if pretrained:
         script_dir = os.path.dirname(__file__)
-        state_dict = torch.load(script_dir + "/state_dicts/resnet18.pt", weights_only=True)
+        state_dict = torch.load(script_dir + "/data/resnet18.pt", weights_only=True)
         model.load_state_dict(state_dict)
     return model.to(device)
