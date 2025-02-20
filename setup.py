@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="labx",
@@ -6,7 +6,7 @@ setup(
     description="Material for labX",
     author="Luiz Chamon",
     url="https://github.com/lfochamon/labx",
-    packages=["labx"],
+    packages=find_packages(),
     include_package_data=True,
     install_requires=["torch"],
 )
